@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amir Ghorbani — Portfolio</title>
 
-  <!-- Google Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===== Top Navigation (CV button removed) ===== -->
+  <!-- ===== Top Navigation ===== -->
   <header class="topbar">
     <div class="container topbar__row">
       <a class="brand" href="#home" aria-label="Go to top">Amir Ghorbani</a>
+
       <nav class="mainnav" aria-label="Primary">
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <!-- Theme toggle -->
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg id="iconSun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2M12 22v-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M4 12H2m20 0h-2M4.93 19.07 3.52 20.48M20.48 3.52l-1.41 1.41" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+        <svg id="iconMoon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" fill="currentColor"/></svg>
+      </button>
+
       <button class="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ===== Hero (split layout, framed photo, no blue splash) ===== -->
+  <!-- ===== Hero ===== -->
   <section id="home" class="hero hero--split">
     <div class="container hero__grid">
       <div class="hero__text reveal">
-        <p class="eyebrow">Hello World 👋,</p>
+        <p class="eyebrow">"Hello World"👋</p>
         <h1>I’m <span class="accent">Amir</span> Ghorbani</h1>
         <p class="subtitle">
           I help you get online with clean, professional, and affordable websites.
         </p>
-
         <div class="hero__cta">
           <a class="btn btn--primary" href="#projects">View Projects</a>
           <a class="btn btn--ghost" href="#contact">Contact Me</a>
@@ -48,10 +55,8 @@
       </div>
 
       <div class="hero__photo reveal">
-        <!-- white card frame -->
         <div class="hero__frame">
-          <!-- portrait fits bottom and slightly overflows from top -->
-          <img class="hero__img" src="./icon/amir.webp" alt="Portrait of Amir Ghorbani" />
+          <img class="hero__img" src="./icon/amir.webp" alt="Portrait of Amir Ghorbani">
         </div>
       </div>
     </div>
@@ -62,16 +67,21 @@
     <div class="container reveal">
       <h2>About Me</h2>
       <div class="prose">
-        <p>My journey with the web goes back to 2013, when I was an undergraduate business student and experimenting with early blogging platforms in Iran. At that time, 
-            my main goal was to share historical books online, but it also became my first encounter with HTML tinkering—changing headers, adding pop-ups, and embedding counters. 
-            <span>Without realizing it, I was already touching the basics of web design.</span><br/><br/>
-            It was in my PhD, however, that I took a real step into programming. I started learning Python for text and patent analysis, 
-            diving deeper into data visualization and text mining as part of my research. Later, personal experiences gave me a new perspective: 
-            <span>was not only a research tool, but also a professional skill.</span><br/><br/>
-            With the encouragement of my partner, a backend developer, I began exploring web development more seriously. 
-            I took foundational courses in HTML, CSS, and JavaScript, and realized that I truly enjoy front-end development—<span>where creativity meets logic.</span><br/><br/>
-            Now, I am taking my first practical step: building my personal website as my very first web development project. 
-            This website is not only my portfolio but also a reflection of my journey—<span>curiosity, to data, to code.</span><br/><br/>
+        <p>
+          My journey with the web goes back to 2013, when I was an undergraduate business student and experimenting 
+          with early blogging platforms in Iran. At that time, my main goal was to share historical books online, 
+          but it also became my first encounter with HTML tinkering—changing headers, adding pop-ups, 
+          and embedding counters. <span>Without realizing it, I was already touching the basics of web design.</span> 
+          <br/><br/>
+          It was in my PhD, however, that I took a real step into programming. I started learning Python for 
+          text and patent analysis, diving deeper into data visualization and text mining as part of my research. 
+          Later, my personal experiences gave me a new perspective: 
+          <span>coding was not only a research tool, but also a professional skill.</span><br/><br/>
+          With the encouragement of my partner, a backend developer, I began exploring web development more seriously. 
+          I took foundational courses in HTML, CSS, and JavaScript, and realized that I truly enjoy 
+          front-end development—<span>where creativity meets logic.</span><br/><br/>
+          Now, I am taking my first practical step: building my personal website as my very first web development project. 
+          This website is not only my portfolio but also a reflection of my journey—<span>from curiosity, to data, to code.</span>
         </p>
       </div>
     </div>
@@ -83,84 +93,65 @@
       <h2>Projects</h2>
 
       <div class="cards">
-  <!-- Project 1 -->
-  <a class="card" href="https://your-personal-site-demo.example" target="_blank" rel="noopener">
-    <img class="thumb" src="./icon/project1.png" alt="Personal website preview">
-    <h3>Personal Website</h3>
-    <p>My first front-end project using HTML, CSS, and JavaScript. Focused on a clean, minimal layout and responsive design.</p>
-    <div class="chips">
-      <span class="badge">HTML</span>
-      <span class="badge">CSS</span>
-      <span class="badge">JavaScript</span>
-    </div>
-  </a>
+        <a class="card" href="https://your-personal-site-demo.example" target="_blank" rel="noopener">
+          <img class="thumb" src="./icon/project1.png" alt="Personal website preview">
+          <h3>Personal Website</h3>
+          <p>My first front-end project using HTML, CSS, and JavaScript. Focused on a clean, minimal layout and responsive design.</p>
+          <div class="chips">
+            <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span>
+          </div>
+        </a>
 
-    <!-- Project 2 -->
-  <a class="card is-soon" href="https://your-ecommerce-demo.example" target="_blank" rel="noopener">
-    <img class="thumb" src="./icon/project2.png" alt="E-commerce website preview">
-    <span class="status">Coming Soon</span>
-    <h3>E-commerce Website</h3>
-    <p>A prototype online store showcasing product listing, cart functionality, and checkout flow.</p>
-    <div class="chips">
-      <span class="badge">HTML</span>
-      <span class="badge">CSS</span>
-      <span class="badge">JavaScript</span>
-      <span class="badge">React</span>
-      <span class="badge">Tailwind CSS</span>
-    </div>
-  </a>
+        <a class="card is-soon" href="https://your-ecommerce-demo.example" target="_blank" rel="noopener">
+          <img class="thumb" src="./icon/project2.png" alt="E-commerce website preview">
+          <span class="status">Coming Soon</span>
+          <h3>E-commerce Website</h3>
+          <p>A prototype online store showcasing product listing, cart functionality, and checkout flow.</p>
+          <div class="chips">
+            <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">React</span><span class="badge">Tailwind CSS</span>
+          </div>
+        </a>
 
-  <!-- Project 3 -->
-  <a class="card is-soon" href="https://your-music-player-demo.example" target="_blank" rel="noopener">
-    <img class="thumb" src="./icon/project3.webp" alt="Web music player preview">
-    <span class="status">Coming Soon</span>
-    <h3>Web Music Player</h3>
-    <p>A browser-based music player built with React, featuring playlists, controls, and a responsive interface.</p>
-    <div class="chips">
-      <span class="badge">JavaScript</span>
-      <span class="badge">React</span>
-      <span class="badge">Tailwind CSS</span>
-    </div>
-  </a>
-</div>
+        <a class="card is-soon" href="https://your-music-player-demo.example" target="_blank" rel="noopener">
+          <img class="thumb" src="./icon/project3.webp" alt="Web music player preview">
+          <span class="status">Coming Soon</span>
+          <h3>Web Music Player</h3>
+          <p>A browser-based music player built with React, featuring playlists, controls, and a responsive interface.</p>
+          <div class="chips">
+            <span class="badge">JavaScript</span><span class="badge">React</span><span class="badge">Tailwind CSS</span>
+          </div>
+        </a>
+      </div>
 
-      <!-- Skills row (with Photoshop) -->
+      <!-- Skills -->
       <div id="skills" class="skills-row">
         <h3 class="skills-title">Skills</h3>
         <div class="logos">
-          <!-- HTML5 -->
           <div class="logo svg">
+            <!-- HTML5 -->
             <svg viewBox="0 0 128 128" class="svg-icon" role="img" aria-label="HTML5 logo">
-              <path fill="#E44D26" d="M19 114L9 0h110l-10 114-45 14z"/>
-              <path fill="#F16529" d="M64 117l36-10 9-101H64z"/>
-              <path fill="#EBEBEB" d="M64 52H45l-1-12h20V28H31l4 44h29zM64 98l-.1.1-16-4-1-12H35l2 24 27 8 .1-.1z"/>
-              <path fill="#fff" d="M64 52v12h17l-2 20-15 4v12l27-8 4-40zM64 28v12h31l1-12z"/>
+              <path fill="#E44D26" d="M19 114L9 0h110l-10 114-45 14z"/><path fill="#F16529" d="M64 117l36-10 9-101H64z"/><path fill="#EBEBEB" d="M64 52H45l-1-12h20V28H31l4 44h29zM64 98l-.1.1-16-4-1-12H35l2 24 27 8 .1-.1z"/><path fill="#fff" d="M64 52v12h17l-2 20-15 4v12l27-8 4-40zM64 28v12h31l1-12z"/>
             </svg>
             <span>HTML</span>
           </div>
-          <!-- CSS3 -->
           <div class="logo svg">
+            <!-- CSS3 -->
             <svg viewBox="0 0 128 128" class="svg-icon" role="img" aria-label="CSS3 logo">
-              <path fill="#1572B6" d="M19 114L9 0h110l-10 114-45 14z"/>
-              <path fill="#33A9DC" d="M64 117l36-10 9-101H64z"/>
-              <path fill="#fff" d="M64 52H46l-1-12h19V28H32l4 44h28zM64 98l-.1.1-16-4-1-12H36l2 24 27 8 .1-.1z"/>
-              <path fill="#EBEBEB" d="M64 52v12h17l-2 20-15 4v12l27-8 4-40zM64 28v12h31l1-12z"/>
+              <path fill="#1572B6" d="M19 114L9 0h110l-10 114-45 14z"/><path fill="#33A9DC" d="M64 117l36-10 9-101H64z"/><path fill="#fff" d="M64 52H46l-1-12h19V28H32l4 44h28zM64 98l-.1.1-16-4-1-12H36l2 24 27 8 .1-.1z"/><path fill="#EBEBEB" d="M64 52v12h17l-2 20-15 4v12l27-8 4-40zM64 28v12h31l1-12z"/>
             </svg>
             <span>CSS</span>
           </div>
-          <!-- JavaScript -->
           <div class="logo svg">
+            <!-- JS -->
             <svg viewBox="0 0 128 128" class="svg-icon" role="img" aria-label="JavaScript logo">
-              <path fill="#F7DF1E" d="M0 0h128v128H0z"/>
-              <path d="M86 108c-7 0-12-3-16-8l9-6c2 3 4 5 7 5 3 0 5-1 5-4 0-3-2-4-7-6l-2-1c-6-3-11-7-11-15 0-8 6-14 16-14 7 0 12 2 16 8l-9 6c-2-3-4-4-7-4s-4 2-4 4c0 3 2 4 7 6l2 1c7 3 11 7 11 15s-6 13-17 13zM44 107c-7 0-12-3-16-9l9-6c2 4 4 6 8 6 4 0 6-2 6-8V56h11v34c0 14-8 17-18 17z" fill="#000"/>
+              <path fill="#F7DF1E" d="M0 0h128v128H0z"/><path d="M86 108c-7 0-12-3-16-8l9-6c2 3 4 5 7 5 3 0 5-1 5-4 0-3-2-4-7-6l-2-1c-6-3-11-7-11-15 0-8 6-14 16-14 7 0 12 2 16 8l-9 6c-2-3-4-4-7-4s-4 2-4 4c0 3 2 4 7 6l2 1c7 3 11 7 11 15s-6 13-17 13zM44 107c-7 0-12-3-16-9l9-6c2 4 4 6 8 6 4 0 6-2 6-8V56h11v34c0 14-8 17-18 17z" fill="#000"/>
             </svg>
             <span>JavaScript</span>
           </div>
-          <!-- Photoshop -->
           <div class="logo svg">
+            <!-- Photoshop -->
             <svg viewBox="0 0 128 128" class="svg-icon" role="img" aria-label="Adobe Photoshop logo">
-              <rect width="128" height="128" rx="20" fill="#001E36"/>
-              <text x="26" y="92" font-size="64" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#31A8FF">Ps</text>
+              <rect width="128" height="128" rx="20" fill="#001E36"/><text x="26" y="92" font-size="64" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#31A8FF">Ps</text>
             </svg>
             <span>Photoshop</span>
           </div>
@@ -176,43 +167,35 @@
       <p class="muted">Feel free to reach out via email or social platforms.</p>
 
       <div class="contact-grid">
-        <a class="icon-link" href="#" id="openEmailPopup">
-          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
-           <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/>
-          </svg>
-          <span>Email</span>
-        </a>
+        <div class="contact-grid">
+  <!-- Email opens the modal -->
+  <a class="icon-link" href="#" id="openEmailPopup" aria-label="Email">
+    <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <!-- Envelope (outlined) -->
+      <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <!--<span>Email</span>-->
+  </a>
 
-        <a class="icon-link" href="https://instagram.com/yourusername" target="_blank" rel="noopener">
-          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-          </svg>
-          <span>Instagram</span>
-        </a>
+  <a class="icon-link" href="https://www.linkedin.com/in/amirghorbani509/" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <!-- LinkedIn (outlined) -->
+      <rect x="3" y="3" width="18" height="18" rx="3" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="8" cy="8" r="1.6" fill="currentColor"/>
+      <path d="M7 11.5h2v7H7zM11 11.5h2v1.2h.03c.4-.8 1.2-1.4 2.6-1.4 2.1 0 3.3 1.3 3.3 3.7v4.5h-2v-4c0-1.3-.5-2.1-1.7-2.1-1.2 0-1.8.9-1.8 2.2v3.9h-2z" fill="currentColor"/>
+    </svg>
+    <!--<span>LinkedIn</span>-->
+  </a>
 
-        <a class="icon-link" href="https://www.linkedin.com/in/amirghorbani509/" target="_blank" rel="noopener">
-          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M6.94 6.5A1.94 1.94 0 1 1 5 4.56 1.94 1.94 0 0 1 6.94 6.5ZM6 8.9h2v9.6H6Zm4 0h1.9v1.3h.03c.27-.5 1-.97 2.06-.97 2.2 0 2.6 1.45 2.6 3.34v5.93h-2v-5.27c0-1.25 0-2.85-1.74-2.85s-2 1.36-2 2.76v5.36h-2Z"/>
-          </svg>
-          <span>LinkedIn</span>
-        </a>
-
-        <a class="icon-link" href="https://github.com/amirghorbani7" target="_blank" rel="noopener">
-          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 9.9 8.1 11.5.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.3 1.6 1.2 2.1 3.1 1.5 3.8 1.1.1-.9.5-1.5 1-1.9-2.7-.3-5.5-1.4-5.5-6.1 0-1.4.5-2.6 1.3-3.5-.1-.3-.6-1.7.1-3.6 0 0 1.1-.4 3.6 1.3a12.5 12.5 0 0 1 6.5 0c2.4-1.7 3.6-1.3 3.6-1.3.7 1.9.2 3.3.1 3.6.8.9 1.3 2 1.3 3.5 0 4.7-2.8 5.8-5.6 6.1.6.5 1.1 1.5 1.1 3v4.4c0 .3.2.7.8.6A12 12 0 0 0 24 12.7 12 12 0 0 0 12 .5Z"/>
-          </svg>
-          <span>GitHub</span>
-        </a>
-
-        <a class="icon-link" href="https://stackoverflow.com/users/yourid" target="_blank" rel="noopener">
-          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M18 21H5v-7h2v5h11v2Zm-9.3-6.1.4-1.9 8 1.8-.4 2-8-1.9Zm1.3-4.6.8-1.7 7.2 3.6-.8 1.7-7.2-3.6Zm2.6-4.4 1.2-1.5 6.1 5-1.2 1.4-6.1-4.9ZM7 16h9v2H7v-2Z"/>
-          </svg>
-          <span>Stack Overflow</span>
-        </a>
-      </div>
+  <a class="icon-link" href="https://github.com/amirghorbani7" target="_blank" rel="noopener" aria-label="GitHub">
+    <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <!-- GitHub (filled) -->
+      <path d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 9.9 8.1 11.5.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.3 1.6 1.2 2.1 3.1 1.5 3.8 1.1.1-.9.5-1.5 1-1.9-2.7-.3-5.5-1.4-5.5-6.1 0-1.4.5-2.6 1.3-3.5-.1-.3-.6-1.7.1-3.6 0 0 1.1-.4 3.6 1.3a12.5 12.5 0 0 1 6.5 0c2.4-1.7 3.6-1.3 3.6-1.3.7 1.9.2 3.3.1 3.6.8.9 1.3 2 1.3 3.5 0 4.7-2.8 5.8-5.6 6.1.6.5 1.1 1.5 1.1 3v4.4c0 .3.2.7.8.6A12 12 0 0 0 24 12.7 12 12 0 0 0 12 .5Z" fill="currentColor"/>
+    </svg>
+    <!--<span>GitHub</span>-->
+  </a>
+</div>
     </div>
   </section>
 
@@ -222,27 +205,59 @@
     </div>
   </footer>
 
-  <!-- Popup Modal -->
-<div id="emailModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <h3>Send me a message</h3>
-    <form id="contactForm">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
+  <!-- ===== Email Modal ===== -->
+  <div id="emailModal" class="modal" aria-hidden="true" aria-labelledby="modalTitle" role="dialog">
+    <div class="modal-content">
+      <button id="closeModal" class="close" aria-label="Close">×</button>
+      <h3 id="modalTitle">Send me a message</h3>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
+      <form id="contactForm" novalidate>
+        <div class="grid-2">
+          <div class="field">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            <small class="error"></small>
+          </div>
+        </div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+        <div class="field">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+          <small class="error"></small>
+        </div>
 
-      <button type="submit" class="btn btn--primary">Send</button>
-    </form>
+        <div class="field">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, question, or just say hello..." required></textarea>
+          <small class="error"></small>
+        </div>
+
+        <div class="field checkbox-row">
+          <input type="checkbox" id="human" name="human" required>
+          <label for="human">I'm human</label>
+          <small class="error"></small>
+        </div>
+
+        <!-- honeypot for bots -->
+        <input type="text" id="website" name="website" autocomplete="off" class="honeypot" tabindex="-1" aria-hidden="true">
+
+        <div class="actions">
+          <button type="submit" class="btn btn--primary">Send</button>
+          <button type="button" class="btn btn--ghost" id="cancelModal">Cancel</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
+
+<!-- Back to Top button (minimal, inverts on hover) -->
+<button id="backToTop" aria-label="Back to top">↑</button>
 
   <!-- Scripts -->
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
